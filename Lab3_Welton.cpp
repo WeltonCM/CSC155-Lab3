@@ -16,10 +16,9 @@ int main() {
 
     if ( (year < 1582 && year % 4 == 0) || (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0) ) {
         leapYear = true; 
-        cout << "The year " << year << " you entered is a leap year!" << endl;
-    } else {
-        cout << "The year " << year << " you entered is not a leap year." << endl;
-    }
-    
+    } 
+
+    cout << "The year " << year << (leapYear ? " is" : " is not") << " a leap year!" << endl;
+
     return 0;
 }
