@@ -1,3 +1,8 @@
+/*
+Name: Lab3_Welton
+Author: Christopher Welton
+Description: This cpp file takes a four digit year as user input, and tells the user if it is a valid leap year. 
+*/
 
 #include<iostream>
 
@@ -9,14 +14,12 @@ int main() {
     cout << "Please enter a year: " << endl;
     cin >> year;
 
-    // leap year if: 
-    // divisible by 4
-    // not a leap year if divisible by 100
-    // is a leap year if divisible by 400
-    // 1500 is a leap year
     if ( (year < 1582 && year % 4 == 0) || (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0) ) {
         leapYear = true; 
+        cout << "The year " << year << " you entered is a leap year!" << endl;
+    } else {
+        cout << "The year " << year << " you entered is not a leap year." << endl;
     }
-    // printf("The year %d %s a leap year", year, (leapYear == true ? "is " : "is not "));
+    
     return 0;
 }
